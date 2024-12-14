@@ -29,31 +29,40 @@ namespace DataTypes_Variables
             string name = "Mayuresh";
 
             Boolean isTrue = false;
-            uint num = -10; // unsigned int. Only stores positive values
-            ulong ul = -45621;
+            //uint num = -10; // unsigned int. Only stores positive values
+            //ulong ul = -45621;
 
             short sh = 1001;
-            ushort us = -12;
+            //ushort us = -12;
 
             byte b = 255;
             sbyte sb = -128; // signed byte.Stores both positive and negative values
 
             var something = 100; // creates a variable without defined value type
-            something = "Mayur";    // Does not allow to change the value type once created
+            Debug.WriteLine("something: {0}", something);
+            //something = "Mayur";    // Does not allow to change the value type once created
+            Debug.WriteLine("something after change: {0}", something);
 
             dynamic somethingNew = 1234;
+            Debug.WriteLine($"somethingNew: {somethingNew}");
             somethingNew = "Ahirrao";   // Dynamic allows to change the value type
+            Debug.WriteLine($"somethingNew: {somethingNew}");
 
             // Different ways of typing various values
-            
+
             // Mentioning the number of parameters
-            Debug.WriteLine("Hello {0}, You are {1} years old", name, age);
+            Debug.WriteLine("Hello {0},You are {1} years old", name, age);
             
             // Concatenating with the variables
             Debug.WriteLine("Hello " +name+ ", You are " +age+ "years old");
 
             // Using '$' symbol to directly add the variable in curly brackets
             Debug.WriteLine($"Hello {name}, You are {age} years old");
+
+            Car car = new Car();
+
+            car.accelerate();
+            car.brake();
 
         }
 
